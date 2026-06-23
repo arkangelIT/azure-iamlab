@@ -7,7 +7,6 @@ Welcome to my documentation page for a hybrid IAM lab hosted in MSFT Azure cloud
 
 ## Architecture
 
-INSERT IMAGE OF ARCHITECTURE
 ![Architecture Diagram](/assets/iamlab-diagram.png)
 
 
