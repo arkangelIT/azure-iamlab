@@ -49,12 +49,12 @@ TYPE: Windows Server 2022
 └── OU=Disabled Accounts
 
 ### USERS:
-
+![AD Users](/assets/iamlab-users.png)
 
 
 ### GROUPS:
 
-
+![AD Users](/assets/iamlab-groups.png)
 
 
 
@@ -82,4 +82,4 @@ STATE: ENABLED
 
 SCOPE: ALL USERS
 
-!image.png
+![SSPR](/assets/iamlab-sspr.png)
