@@ -9,6 +9,15 @@ Welcome to my documentation page for a hybrid IAM lab hosted in MSFT Azure cloud
 
 ![Architecture Diagram](/assets/iamlab-diagram.png)
 
+## Lessons Learned
+
+- Need to edit the Link order for the Default Domain Policy so seperate GPOs ex. Password Policy can be applied as primary instead of the default policy.
+-https://specopssoft.com/blog/check-password-requirements-active-directory/
+-Good detail on default domain GPO management
+- Using Free Trial, configured alternate domain to sync with local AD domain.
+-https://learn.microsoft.com/en-us/answers/questions/2141057/how-to-setup-active-drirectory-sync-with-mismatche
+-Azure billing can be confusing, the top level is the Billing Profile and any credits or funds come from this profile. They are then applied to Subscriptions underneath the profile. Received a message that I had no credits, but this was for the Subscription being used, not the billing profile.  
+
 
 # ACTIVE DIRECTORY INFO:
 
