@@ -68,7 +68,6 @@ STATE: Enabled
 
 SCOPE: All Users
 
-!image.png
 
 ## SSPR POLICY:
 
