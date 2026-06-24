@@ -69,7 +69,7 @@ TYPE: Windows Server 2022
 
 STATE: Enabled
 
-SCOPE: All Users excluding Admin account
+SCOPE: All Users excluding Break Glass Admin account
 
 ### Block Legacy Auth
 
