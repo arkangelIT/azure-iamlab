@@ -1,1 +1,31 @@
+Import-Module activedirectory
 
+#Set Variable to import data from CSV file
+$NewUsers = Import-csv C:\Scripts\Users.csv
+
+$num1 = 1
+$num0 = 0
+
+#For loop to assign value from CSV column to variable that will be used with PS command to create new user
+foreach ($User in $NewUsers) {
+$username = $User.SAMAccount
+$password = $User.password
+$firstname = $User.FirstName
+$lastname = $User.LastName
+$email = $User.email
+$title = $User.title
+$department = $User.department
+
+if ($num1=$num0) {
+Write-Warning "User already exists with that name."}
+
+else {
+New-ADUser -SamAccountName $username `-UserPrincipalName "$username@iamlab.local"`
+-Name "$firstname $lastname" -GivenName $firstname `-Surname $lastname -Enabled $True`
+-DisplayName "$lastname $firstname" -EmailAddress $email `-Title $title -Department $department`
+-Path "OU=Users,OU=Corporate,dc=iamlab,dc=local" `-AccountPassword (ConvertTo-SecureString $password -AsPlainText -Force)`
+-ChangePasswordAtLogon $True
+
+}
+
+}
