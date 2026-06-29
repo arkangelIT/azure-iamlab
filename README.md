@@ -85,3 +85,11 @@ STATE: ENABLED
 SCOPE: ALL USERS
 
 ![SSPR](/assets/iamlab-sspr.png)
+
+## Priviledged Identity Management:
+
+STATE: ENABLED
+
+SCOPE: Configured JIT Intune Administrator assignment
+
+
