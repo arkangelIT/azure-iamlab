@@ -1,0 +1,22 @@
+#Create security groups
+
+$Path = “OU=Groups,OU=Corporate,DC=###,DC=local”
+
+$groups= @(”SG-IAM-Admins”,”SG-Cloud-Admins”,”SG-Helpdesk”,
+“SG-VPN-Users”,”SG-MFA-Enforced”)
+
+$count = 0
+
+ForEach($group in $groups) {
+New-ADGroup -Name $groups[$count]  -GroupScope Global -GroupCategory Security -Path $Path
+
+Write-Host “Created: “ -ForegroundColor Cyan
+}
+
+$count++
+
+#Add members
+
+Add-ADGroupMember “SG-IAM-Admins” -Members “sbenito”
+Add-ADGroupMember “SG-Cloud-Admins” -Members “sbenito”,”pparker”
+Add-ADGroupMember “SG-Helpdesk” -Members “jadams”,”pparker”
